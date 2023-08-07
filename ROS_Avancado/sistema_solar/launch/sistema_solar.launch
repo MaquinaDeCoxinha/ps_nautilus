@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="tf2_ros" type="static_transform_publisher"  name="link1_broadcaster" args="0 2 0 0 0 0 1 estrela planetas"/>
+    <arg name="params_path" default="$(find sistema_solar)/config/sistema_solar_params.yaml"/>
+    <param name="params_path" value="$(arg params_path)"/>
+    <node name="sistema_solar" pkg="sistema_solar" type="sistema_solar.py">
+        <param name="params_path" value="$(arg params_path)"/>
+    </node>
+</launch>

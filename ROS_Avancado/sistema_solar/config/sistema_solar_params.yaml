@@ -1,0 +1,7 @@
+estrela: "sol"
+planetas:
+  - nome: "planeta1"
+    raio_orbita: 5.0
+    satelites:
+      - nome: "satelite1"
+        raio_orbita: 1.0
